@@ -1,21 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { Route, Routes } from 'react-router-dom'
+import { ROUTES } from './utils/constants.js'
+import { Header } from './components/header/Header'
+import { Footer } from './components/footer/Footer'
+import { Home } from './pages/Home'
+import { Detail } from './pages/Detail'
+import { Error } from './pages/Error'
 import './App.css'
 
 function App() {
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Pokedex CAC</h1>
+      <Header />
+      <Routes>
+        <Route path={ROUTES.home} element={<Home />} />
+        <Route path={`${ROUTES.detail}/:id`} element={<Detail />} />
+        <Route path={ROUTES.error} element={<Error />} />
+      </Routes>
+      <Footer />
     </>
   )
 }
