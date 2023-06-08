@@ -6,14 +6,13 @@ const PokemonsContext = createContext()
 const PokemonsProvider = ({ children }) => {
   const [pokemons, setPokemons] = useState([])
   const [offset, setOffset] = useState(0)
-	// si no setean limit se buscan 12
-  const [limit, setLimit] = useState(12) 
+  const [limit, setLimit] = useState(30) 
   const [loading, setLoading] = useState(false)
 
 	/*
 	Para tener todos los pokemones: 
-	limit = 1282 o un numero mayor
-	offset = 0
+	limit = 1282 es el maximo, el la cantidad de resultados que traigo
+	offset = 0, empiezo a contar desde el pokemon con id 0
 	*/
   const getAllPokemons = async (offset, limit) => {
 		setLoading(true)
@@ -33,18 +32,11 @@ const PokemonsProvider = ({ children }) => {
     setLoading(false)
   }
 
-  // Llamar a un pokemon por ID
-  const getPokemonByID = async (id) => {
-    const res = await fetch(`${BASE_URL}pokemon/${id}`)
-    const data = await res.json()
-    return data
-  }
-
   useEffect(() => {
-    getAllPokemons()
-  }, [])
+    getAllPokemons(offset, limit)
+  }, [offset, limit])
 
-  const data = { pokemons, setPokemons }
+  const data = { pokemons, offset, limit, loading, setPokemons }
 
   return (
     <PokemonsContext.Provider value={data}>{children}</PokemonsContext.Provider>
