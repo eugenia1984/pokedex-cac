@@ -7,17 +7,17 @@ import { Home } from './pages/Home'
 import { Detail } from './pages/Detail'
 import { Error } from './pages/Error'
 import { Contact } from './pages/Contact.jsx'
-import PokemonesContext from './context/PokemonesContext'
+import PokemonsContext from './context/PokemonsContext'
 import './App.css'
 
 function App() {
-  const { pokemones } = useContext(PokemonesContext)
+  const { pokemons } = useContext(PokemonsContext)
   
   return (
     <>
       <Header />
       <Routes>
-        <Route path={ROUTES.home} element={<Home pokemones={pokemones} />} />
+        <Route path={ROUTES.home} element={<Home pokemons={pokemons} />} />
         <Route path={`${ROUTES.detail}/:id`} element={<Detail />} />
         <Route path={ROUTES.contact} element={<Contact />} />
         <Route path={ROUTES.error} element={<Error />} />
