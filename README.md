@@ -34,9 +34,11 @@ import viteLogo from '/vite.svg'
 
 - <img src="https://img.icons8.com/color/30/null/javascript--v1.png"/>**JavaScript** 
 
-- <img src="https://img.icons8.com/bubbles/30/null/react.png"/>**React**.
+- <img src="https://img.icons8.com/bubbles/30/null/react.png"/>**React**
 
+- [<img width="30" height="30" src="https://img.icons8.com/color/30/tailwind_css.png" alt="tailwind_css"/> **Tailwind**](https://tailwindcss.com/)
 
+- [**Axios**](https://axios-http.com/)
 
 ---
 
