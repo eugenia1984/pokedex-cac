@@ -29,7 +29,15 @@ body {
   min-height: 100vh;
 }
 
-h2 {
+h1 {
   text-align: center;
+  font-size: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
   padding: 0rem 0.5rem 1rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
 }

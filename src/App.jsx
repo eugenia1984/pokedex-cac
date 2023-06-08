@@ -18,7 +18,7 @@ function App() {
       <Header />
       <Routes>
         <Route path={ROUTES.home} element={<Home pokemons={pokemons} />} />
-        <Route path={`${ROUTES.detail}/:id`} element={<Detail />} />
+        <Route path={`${ROUTES.detail}:id`} element={<Detail />} />
         <Route path={ROUTES.contact} element={<Contact />} />
         <Route path={ROUTES.error} element={<Error />} />
       </Routes>

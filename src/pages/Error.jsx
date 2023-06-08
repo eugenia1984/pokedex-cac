@@ -1,5 +1,6 @@
-import { GoBackHome } from '../components/buttons/GoBackHome'
+import { GoButton } from '../components/buttons/GoButton'
 import { Text } from '../components/Text'
+import { ROUTES } from '../utils/constants'
 
 export const Error = () => {
   return (
@@ -11,7 +12,7 @@ export const Error = () => {
         </h2>
         <Text text="Sorry, we couldn’t find the page you’re looking for." />
         <div className="mt-10 flex items-center justify-center gap-x-6">
-          <GoBackHome text="Go back home" />
+          <GoButton text="Go back home" to={ROUTES.home}/>
         </div>
       </div>
     </main>

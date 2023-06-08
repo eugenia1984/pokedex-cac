@@ -1,4 +1,5 @@
 import { createContext, useEffect, useState } from 'react'
+import { BASE_URL } from '../utils/constants'
 
 const PokemonsContext = createContext()
 
@@ -8,7 +9,7 @@ const PokemonsProvider = ({ children }) => {
 	// si no setean limit se buscan 12
   const [limit, setLimit] = useState(12) 
   const [loading, setLoading] = useState(false)
-  const BASE_URL = 'https://pokeapi.co/api/v2/'
+
 	/*
 	Para tener todos los pokemones: 
 	limit = 1282 o un numero mayor
@@ -40,7 +41,6 @@ const PokemonsProvider = ({ children }) => {
   }
 
   useEffect(() => {
-    // limit = 50, offset = 0
     getAllPokemons()
   }, [])
 
