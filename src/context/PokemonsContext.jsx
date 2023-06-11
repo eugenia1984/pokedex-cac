@@ -32,11 +32,18 @@ const PokemonsProvider = ({ children }) => {
     setLoading(false)
   }
 
+  // Para tener un pokemon por el id
+	const getPokemonById = async id => {
+		const res = await fetch(`${BASE_URL}pokemon/${id}`);
+		const data = await res.json();
+		return data;
+	};
+
   useEffect(() => {
     getAllPokemons(offset, limit)
   }, [offset, limit])
 
-  const data = { pokemons, offset, limit, loading, setPokemons }
+  const data = { pokemons, offset, limit, loading, setPokemons, getPokemonById }
 
   return (
     <PokemonsContext.Provider value={data}>{children}</PokemonsContext.Provider>

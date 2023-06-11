@@ -5,9 +5,9 @@ import './index.css'
 import { PokemonsProvider } from './context/PokemonsContext.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-    <PokemonsProvider>
+  <PokemonsProvider>
       <HashRouter>
         <App />
       </HashRouter>
-    </PokemonsProvider>
+  </PokemonsProvider>
 )
