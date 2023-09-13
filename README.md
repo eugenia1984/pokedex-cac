@@ -10,20 +10,6 @@ Teniendo como guía a la web [https://www.pokemon.com/el/pokedex](https://www.po
 En mi caso aprovecho y utilizo Tailwind para practicar Tailwind.
 
 ---
-### Nota
-
-Para importar imagenes tengo dos opciones:
-
-- El vite.svg está dentro de la carpeta **public**
-
-- El react.svg está dentro de **src/assets**
-
-```JSX
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-```
-
----
 
 ## Tecnologías 🛠️
 
