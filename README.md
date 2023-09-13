@@ -1,4 +1,4 @@
-# :computer: Practica de React en Codo a Codo - Pokedex
+# <img width="26" height="26" src="https://img.icons8.com/office/26/react.png" alt="react"/> Practica de React en Codo a Codo - Pokedex
 
 ---
 
